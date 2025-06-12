@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200;400;600&display=swap'); */
+
+
+* { 
+  text-decoration: none; box-sizing: border-box;
+  padding: 0;margin: 0; 
+  font-family:'Sarabun','sans-serif';
+  /* font-family:'Noto Sans Thai','Sarabun','sans-serif'; */
+}
+html{ font-size: 16px; color: bisque; }
+body{ background-color: black;  }
+
+input[type=file]{
+  font-size: 0.9rem;
+  margin: 3px 0;
+  font-weight: bold;  
+  color: lightblue;
+}
+
+/***  Input  ***/
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=date],
+textarea,
+select{
+  color: blue;
+} 
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=submit],
+input[type=email],
+input[type=date],
+input[type=button],
+select,
+button,
+textarea{
+  font-size: 0.9rem; 
+  /* border: 1px solid black; */
+  border: none;
+  /* border-radius: 3px; */
+  /* padding: 3px 3px; */
+  /* line-height: 1.75rem; */
+  font-weight: bold;
+}
+
+/*** สำหรับ Input : hover ที่เป็นปุ่ม ***/
+input[type=submit]:hover, 
+input[type=button]:hover,
+input[type=date]:hover,
+button:hover{
+  filter: brightness(130%); 
+  cursor: pointer; 
+}
+
+/*** สำหรับ Input : FOCUS ที่ให้กรอก ***/
+select:focus,
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=date]:focus { 
+  background-color: lightblue;  
+  outline: none!important;
+}
+
+/*** สำหรับ Input : DISABLED ***/
+input[type=text]:disabled,
+input[type=button]:disabled,
+input[type=submit]:disabled,
+input[type=password]:disabled,
+input[type=search]:disabled,
+input[type=number]:disabled,
+input[type=search]:disabled,
+input[type=email]:disabled,
+button:disabled{ 
+  color: lightblue!important;
+  background-color: #484848!important;   
+  cursor:not-allowed;
+}
+textarea:disabled,
+select:disabled{
+  color: blue!important;
+  background-color: lightgray;
+  cursor:not-allowed;
+  opacity: 1; /* ค่าของ Browser ทำจางไว้ */
+}
+
+/*** สำหรับ Input : READONLY ***/
+textarea:read-only,
+input[type=text]:read-only,
+input[type=password]:read-only,
+input[type=search]:read-only,
+input[type=email]:read-only,
+input[type=number]:read-only{ 
+  color: blue;
+  background-color: lightgray;
+}
+
+::placeholder { 
+  color: lightslategray; 
+  font-weight: 400;  
+  font-size: 0.9rem;
+  padding: 3px 0; /* ช่วยให้วรรณยุกต์แสดงครบ*/
+}
+
+/**************************************/
+fieldset{
+  border: 1px solid black;
+  border-radius: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+  
+  padding-block-start: 0.35em;
+  padding-block-end: 0.35em;
+  min-inline-size: min-content;
+  background-color: #263F3F;  
+}
+legend{
+  margin-left: 3px;
+  padding: 5px 5px;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: not-allowed;
+  text-decoration: none;
+  color: lightblue!important;
+  background-color: gray!important;
+}
+
+
+/**************************************/
+/********* Header Login zone **********/
+/**************************************/
+header{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-gap: 0px;
+  border-bottom: 3px solid yellowgreen;
+  padding-bottom: 1px;
+}
+header .header-title {
+  grid-area: 1/1/2/2;
+  padding-left: 0px;
+}
+/* header .header-report {
+  grid-area: 1/2/2/3;
+  line-height: 2.3rem;
+  margin-left: auto;
+  padding-right: 5px;  
+}
+header #frmLogin{
+  grid-area: 1/3/2/4;
+  display: grid;
+  grid-template-columns: auto auto 70px;
+}
+header #frmLogin #userTelLogin{
+  width: 100%;
+  grid-area: 1/1/2/2; 
+  border: 1px solid black;
+}
+header #frmLogin #userPasswordLogin{ 
+  width: 100%;
+  grid-area: 1/2/2/3; 
+  border: 1px solid black;
+}
+header #frmLogin .btn-login{
+  grid-area: 1/3/2/4; 
+  color: white;
+  font-weight: bold;
+  background-color: darkgreen;      
+}
+header #frmLogin .btn-logout{ 
+  grid-area: 1/3/2/4;
+  color: white;
+  font-weight: bold;
+  background-color: darkred;
+} */
+
+
+/*** ขนาด Font ***/
+.fs-s{ font-size: 0.70rem!important; }
+.fs-xm{ font-size: 0.80rem!important; }
+.fs-m{ font-size: 0.85rem!important; }
+.fs-ns{ font-size: 0.90rem!important;}
+.fs-n{ font-size: 0.95rem!important;}
+.fs-l{ font-size: 1.15rem!important;}
+.fs-x{ font-size: 1.25rem!important; }
+.fs-xl{ font-size: 1.30rem!important; }
+.fs-xxl{ font-size: 1.75rem!important; }
+.fs-3xl{ font-size: 2.0rem!important; }
+
+/*** การวางแนวข้อความ ***/
+.al-r{ text-align: right!important; }
+.al-l{ text-align: left!important; }
+.al-c{ text-align: center!important; }
+
+/*** Margin ***/
+.mg-s{ margin: 3px!important;}
+.mg-m{ margin: 6px!important;}
+.mg-l{ margin: 10px!important;}
+/*** Margin ***/
+.mg-t-s{ margin-top: 3px!important;}
+.mg-t-m{ margin-top: 5px!important;}
+.mg-t-l{ margin-top: 7px!important;}
+.mg-t-xl{ margin-top: 10px!important;}
+.mg-t-xxl{ margin-top: 15px!important;}
+.mg-t-3xl{ margin-top: 20px!important;}
+.mg-b-s{ margin-bottom: 3px!important;}
+.mg-b-m{ margin-bottom: 5px!important;}
+.mg-b-l{ margin-bottom: 7px!important;}
+.mg-b-xl{ margin-bottom: 10px!important;}
+.mg-l-xs{ margin-left: 1px!important;}
+.mg-l-s{ margin-left: 3px!important;}
+.mg-l-m{ margin-left: 5px!important;}
+.mg-l-l{ margin-left: 7px!important;}
+.mg-l-xl{ margin-left: 10px!important;}
+.mg-r-xs{ margin-right: 1px!important;}
+.mg-r-s{ margin-right: 3px!important;}
+.mg-r-m{ margin-right: 5px!important;}
+.mg-r-l{ margin-right: 7px!important;}
+.mg-r-xl{ margin-right: 10px!important;}
+
+/*** Padding  ***/
+.pd-n{padding:0px!important;}
+.pd-s{padding:3px!important;}
+.pd-m{padding:5px!important;}
+.pd-l{padding:7px!important;}
+.pd-xl{padding:10px!important;}
+/*** Padding LEFT ***/
+.pd-l-s{padding-left:3px!important;}
+.pd-l-m{padding-left:5px!important;}
+.pd-l-l{padding-left:7px!important;}
+.pd-l-xl{padding-left:10px!important;}
+.pd-l-xxl{padding-left:15px!important;}
+/*** Padding RIGHT ***/
+.pd-r-s{padding-right:3px!important;}
+.pd-r-m{padding-right:5px!important;}
+.pd-r-l{padding-right:7px!important;}
+.pd-r-xl{padding-right:10px!important;}
+.pd-r-xxl{padding-right:15px!important;}
+/*** Padding TOP ***/
+.pd-t-s{padding-top:3px!important;}
+.pd-t-m{padding-top:5px!important;}
+.pd-t-l{padding-top:7px!important;}
+.pd-t-xl{padding-top:10px!important;}
+.pd-t-xxl{padding-top:15px!important;}
+/*** Padding BOTTOM ***/
+.pd-b-s{padding-bottom:3px!important;}
+.pd-b-m{padding-bottom:5px!important;}
+.pd-b-l{padding-bottom:7px!important;}
+
+.bd-n{ border: none!important;}
+.bd-lr{ border-left: 1px solid #333; border-right: 1px solid #333; }
+.bd-l{ border-left: 1px solid #333; }
+.bd-t{ border-top: 1px solid #333; }
+.bd-r{border-right: 1px solid #333; }
+.bd-b{border-bottom: 1px solid #333; }
+.bd-ar{ border: 1px solid lightgreen;}
+.bd-ar-gray{ border: 1px solid gray;}
+
+/**********  *********************************/
+.ba{ border: 1px solid black!important;border-radius: 3px;}
+.bl{ border-left: 1px solid black!important; }
+.br{ border-right: 1px solid black!important; }
+.bt{border-top: 1px solid black!important;}
+.bb{border-bottom: 1px solid black!important;}
+
+.ba2{border: 1px solid gray!important; border-radius: 3px;}
+.bl2{border-left: 1px solid gray!important; }
+.br2{border-right: 1px solid gray!important; }
+.bt2{border-top: 1px solid gray!important;}
+.bb2{border-bottom: 1px solid gray!important;}
+
+/*** Background ***/
+.bg-white{ background-color: white; }
+.bg-black{ background-color: black; }
+.bg-red{ background-color: red; }
+.bg-orange{ background-color: darkorange; }
+.bg-orange-red{ background-color: orangered; }
+.bg-blue{ background-color: blue; }
+.bg-blueviolet{ background-color: blueviolet; }
+.bg-skyblue{ background-color: skyblue; }
+.bg-li-blue{ background-color: lightblue; }
+.bg-liblue{ background-color: lightblue; }
+.bg-dk-blue{ background-color: darkblue; }
+.bg-cd-blue{ background-color: CadetBlue; }
+.bg-cornblue{ background-color: CornflowerBlue; }
+.bg-dk-slblue{ background-color: darkslateblue; }
+.bg-royalblue{ background-color: royalblue; }
+.bg-orchid{ background-color: orchid; }
+.bg-mgt{ background-color: magenta; }
+.bg-li-salmon{ background-color: lightsalmon; }
+.bg-li-grey{ background-color: lightgrey; }
+.bg-li-cyan{ background-color: lightCyan; }
+.bg-honeydew{ background-color: HoneyDew; }
+.bg-goldenrod{ background-color: goldenrod; }
+.bg-dog{ background-color: DarkOliveGreen; }
+.bg-green{ background-color: green!important;}
+.bg-dkgreen{ background-color: darkgreen; }
+.bg-steelblue{ background-color: steelblue; }
+.bg-teal{ background-color: teal; }
+.bg-dsg-li{ background-color: #2F4F4F; }
+.bg-dsg-nm{ background-color: darkslategray; }
+.bg-dsg-dk1{ background-color: #263F3F; }
+.bg-dsg-dk2{ background-color: #1E3232; }
+.bg-dsg-dk3{ background-color: #101b1b; }
+.bg-brick{ background-color: IndianRed; }
+.bg-gold{ background-color: darkgoldenrod; }
+.bg-coral{ background-color: coral; }
+.bg-gray{ background-color: gray; }
+.bg-111{ background-color: #111; }
+.bg-222{ background-color: #222; }
+.bg-333{ background-color: #333; }
+.bg-444{ background-color: #444; }
+.bg-555{ background-color: #555; }
+.bg-666{ background-color: #666; }
+.bg-777{ background-color: #777; }
+.bg-888{ background-color: #888; }
+.bg-ligray{ background-color: lightgray; }
+.bg-ligreen{ background-color: lightgreen; }
+.bg-limegreen{ background-color: limegreen ; }
+.bg-frg{ background-color: ForestGreen ; }
+.bg-dk-cyan{ background-color: darkcyan ; }
+.bg-seagreen{ background-color: SeaGreen ; }
+.bg-mid-aqmr{ background-color: MediumAquaMarine ; }
+.bg-mid-turq{ background-color: MediumTurquoise ; }
+.bg-dg-blue{ background-color: dodgerblue ; }
+/* สำหรับปุ่ม */
+.bg-load{ background-color: CornflowerBlue!important; }
+.bg-reload{ background-color: orchid!important; }
+.bg-save{ background-color: green!important; }
+.bg-new{ background-color: royalblue!important; }
+.bg-edit{ background-color: darkorange!important; }
+.bg-delete{ background-color: red!important; }
+.bg-print{ background-color: darkolivegreen!important; color: white;}
+.bg-change{ background-color: magenta!important; }
+.bg-search{ background-color:lightseagreen!important; }
+.bg-fs{ background-color: #263F3F!important; }
+.bg-check{ background-color: palevioletred!important;}
+.bg-clear{ background-color: darkmagenta!important;}
+.bg-report{ background-color: HotPink!important; color: white;}
+.bg-view{ background-color: goldenrod!important; color: white;}
+.bg-create{ background-color: goldenrod!important; }
+.bg-send{ background-color: mediumpurple!important; }
+.bg-borrow{ background-color: RoyalBlue!important;}
+.bg-scan{ background-color: orchid!important; color: white; font-weight: bolder;}
+.btn-minus{ background-color: red!important; color: white; font-weight: bolder;}
+.btn-dn{ background-color: darkviolet!important; color: white;font-weight: bolder;}
+.btn-up{ background-color: violet!important; color: white;font-weight: bolder;}
+
+/*** Font Color ***/
+.fc-111{ color: #111; }
+.fc-222{ color: #222; }
+.fc-333{ color: #333; }
+.fc-444{ color: #444; }
+.fc-555{ color: #555; }
+.fc-666{ color: #666; }
+.fc-777{ color: #777; }
+.fc-888{ color: #888; }
+.fc-999{ color: #999; }
+.fc-white{ color: white; }
+.fc-cfb{ color: cornflowerblue; }
+.fc-gray{ color: gray; }
+.fc-red{ color: red!important;}
+.fc-pink{ color: pink; }
+.fc-hotpink{ color: hotpink; }
+.fc-orchid{ color: orchid; }
+.fc-papayawhip{ color: papayawhip; }
+.fc-ivory{ color: ivory; }
+.fc-gy{ color: greenyellow; }
+.fc-yg{ color: yellowgreen ; }
+.fc-lime{ color: lime ; }
+.fc-limegreen{ color: limegreen ; }
+.fc-green{ color: green; }
+.fc-ligreen{ color: lightgreen; }
+.fc-li-green{ color: lightgreen; }
+.fc-dkyellow{ color: darkkhaki; }
+.fc-yellow{ color: yellow; }
+.fc-black{ color: black; }
+.fc-licyan{ color: steelblue; }
+.fc-blue{ color: blue; }
+.fc-liblue{ color: lightblue; }
+.fc-skyblue{ color: skyblue; }
+.fc-aqua{ color: aqua; }
+.fc-aquamarine{ color: aquamarine; }
+.fc-orange{ color: orange; }
+.fc-gold{ color: gold; }
+.fc-goldenrod{ color: darkgoldenrod; }
+.fc-lawngreen{ color: lawngreen; } 
+.fc-brick{ color: IndianRed; }
+.fc-dog{ color: darkgoldenrod; }
+.fc-dk-slb{ color: darkslateblue; }
+.fc-bviolet{ color: blueviolet; }
+.fc-violet{ color: violet; }
+.fc-mgt{ color: magenta; }
+
+.fw-b{font-weight: bold;}
+.fw-100{font-weight: 100;}
+.ul{  text-decoration: underline}
+.lt{  text-decoration: line-through }
+.fl-r{float: right;}
+.fl-l{float: left;}
+
+.lh-xxxs{line-height: 0.5rem;}
+.lh-xxs{line-height: 0.6rem;}
+.lh-xs{line-height: 0.75rem;}
+.lh-s{line-height: 0.9rem;}
+.lh-n{line-height: 1.0rem;}
+.lh-m{line-height: 1.1rem;}
+.lh-l{line-height: 1.2rem;}
+.lh-xl{line-height: 1.45rem;}
+.lh-xxl{line-height: 1.75rem;}
+.lh-xxxl{line-height: 2.0rem;}
+.lh-4xl{line-height: 2.5rem;}
+.lh-5xl{line-height: 5rem;}
+
+/*** Display ***/
+.dp-n{ display: none!important;}
+.vd-n{
+  background-color: yellow!important;
+  border: 1px solid red!important;
+}
+.br-dp-n{      display: none;}
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button { -webkit-appearance: none;margin: 0;}
+.br-dp-print{  display: none;}
+
+.clickable{ cursor: pointer; }
+.clickable:hover{ filter: brightness(120%);}
+.box-black{  border-radius: 3px;border: 1px solid black;  padding: 1px 5px; }
+.box-888{    border-radius: 3px;border: 1px solid #888;   padding: 1px 5px; }
+.box-orange, .box-red, .box-green, .box-yellow{ 
+  border-radius: 3px;padding: 0px 5px 2px 5px;
+} 
+.box-orange{ border: 1px solid orange; color: orange; }
+.box-yellow{ border: 1px solid yellow; color: yellow; }
+.box-red{    border: 1px solid red; color: red; }
+.box-green{  border: 1px solid lightgreen;  color: lightgreen; }
+
+/****** Toast **************************/
+#toast{
+  visibility: hidden;
+  min-width: 250px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px 5px;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  bottom: 30px;
+}
+#toast.green {
+  border-top: 3px solid lime;
+  border-bottom: 3px solid lime;
+  background-color: darkgreen;
+}
+#toast.blue {
+  border-top: 3px solid darkslateblue;
+  border-bottom: 3px solid darkslateblue;
+  background-color: DodgerBlue;
+}
+#toast.red {
+  border-top: 3px solid red;
+  border-bottom: 3px solid red;
+  background-color: darkred;
+}
+/* ต้องตั้งเวลา 3.0 ให้ตรงกับ  showToast */
+/* #toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 3.0s;
+  animation: fadein 0.5s, fadeout 0.5s 3.0s;
+} */
+@keyframes fadein {
+  from { bottom: 0;    opacity: 0;}
+  to {   bottom: 30px; opacity: 1;}
+}
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1;}
+  to {   bottom: 0;    opacity: 0;}
+}
+/* @-webkit-keyframes fadein {
+  from { bottom: 0;    opacity: 0;}
+  to {   bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+  from { bottom: 30px; opacity: 1;}
+  to {   bottom: 0;    opacity: 0;}
+} */
+
+/************ CHECKBOX **********************************************************/
+.cb-ctn {
+  /* display: block; */
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cb-ctn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} 
+.cb-checkmark {
+  position: absolute;
+  top: 4px;
+  left: 5px; 
+  height: 20px;
+  width: 20px;
+  background-color: #FFFFFF;
+  outline: 1px solid lightgray;
+}
+.cb-ctn:hover input ~ .cb-checkmark { background-color: #cccccc; }   
+.cb-ctn input:checked ~ .cb-checkmark:after { display: block; }   
+.cb-ctn input:checked ~ .cb-checkmark { background-color: #2196F3; }
+.cb-checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+.cb-ctn .cb-checkmark:after {
+ left: 5px;
+ top: 1px;
+ width: 5px;
+ height: 10px;
+ border: solid white;
+ border-width: 0 4px 4px 0;
+ -webkit-transform: rotate(45deg);
+ -ms-transform: rotate(45deg);
+ transform: rotate(45deg);
+} 
+
+.blink{ animation:blinkText 0.5s infinite!important;}
+@keyframes blinkText{
+  0%   { color:orange;    }
+  49%  { color:orange;    }
+  60%  { color:transparent; }
+  99%  { color:transparent; }
+  100% { color:orange;    }
+} 
+
+.splash{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 1);
+  text-align: center;
+  line-height: 20rem;
+  font-size: 5rem;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {animation-delay: -0.5s;}
+@keyframes lds-ripple {
+  0%   {top:36px;left:36px;width:0;   height:0;   opacity:0.1;}
+  4.9% {top:36px;left:36px;width:0;   height:0;   opacity:0.25;}
+  5%   {top:36px;left:36px;width:0;   height:0;   opacity:0.5;}
+  100% {top:0px; left:0px; width:72px;height:72px;opacity:1;}
+}
+
+/**************** จอขนาดเล็ก ****************/
+@media screen and (max-width: 450px) {
+  header{
+    grid-template-columns: auto auto;
+  }
+  header .header-title {
+    grid-area: 1/1/2/2;
+    padding-right: 5px;
+  }
+  /* header .header-report {
+    grid-area: 2/1/3/3;
+    line-height: 2rem;
+    margin: auto;
+    padding-right: 0px;
+  }
+  header #frmLogin{
+    grid-area: 1/2/2/3;
+    grid-template-columns: auto auto 50px;
+  }
+
+  header #frmLogin #userTelLogin{
+    grid-area: 1/1/2/2;
+  }
+  header #frmLogin #userPasswordLogin{ 
+    grid-area: 1/2/2/3; 
+  }
+  header #frmLogin .btn-login{
+    grid-area: 1/3/2/4;
+  }
+  header #frmLogin .btn-logout{ 
+    grid-area: 1/3/2/4;
+  } */
+  .br-dp-n {  display: inline-block;}
+}

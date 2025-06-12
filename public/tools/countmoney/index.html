@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">     
+    <link rel="icon" type="image/png" href="https://toptengas.com/images/ttg_fav.png">
+    <link rel="stylesheet" href="style_All.css">
+    <link rel="stylesheet" href="CountMoney_Style.css">
+    <title>นับเงิน</title>
+</head>
+<body>
+    
+  <!-- Header/Login -->
+  <header id="headerContainer" class="header-container">
+
+    <!-- Title -->
+    <div class="header-title"  id="headerTitle">
+      <h2 class="" style="color:white">
+        <span style="color:Gold">นับ</span><span style="color:wheat">เงิน</span>
+        <span style="color:gray" class="fs-s">V1.1A</span>
+      </h2>
+    </div>
+    
+  </header>
+
+  <!--  -->
+  <main class="main-container" id="mainContainer">  
+
+    <form class="pd-l" id="mainForm">
+
+      <div class="row pd-t-m pd-b-l">
+        <label class="col-1 al-c fs-xl box-yellow" name="dateCtn" id="dateCtn"></label>
+        <label class="col-2 al-c fs-xl box-green"  name="clock" id="clock"></label>
+        <div class="col-3 btn-group">
+          <input type="button" value="Clear" class="btn-show bg-clear"
+                  onclick="onBtnClicked(this,'ON');">
+          <input type="button" value="CF" class="btn-confirm" 
+                  onclick="document.getElementById('mainForm').reset();onBtnClicked(this,'CANCEL')">
+          <input type="button" value="CC" class="btn-cancel"
+                  onclick="onBtnClicked(this,'CANCEL')">
+        </div>
+        <label class="col-4 al-c fs-xl"></label>       
+        <input class="col-5 btn bg-print" type="button" value="Print" onclick="print80(this)">
+      </div>
+      
+      <!-- หน่วยงาน -->
+      <div class="row">
+        <label class="col-30 al-r pd-r-l">หน่วยงาน</label>                
+        <input class="col-70 al-c bb bl fs-xl" type="text" id="unit" name="unit" placeholder="หน่วยงาน">
+      </div>
+      <!-- ผู้ส่ง -->
+      <div class="row">
+        <label class="col-30 al-r pd-r-l">ผู้ส่ง</label>                
+        <input class="col-70 al-c bb bl fs-xl" type="text" id="sender" name="sender" placeholder="ผู้ส่ง">
+      </div>
+
+      <div class="row mg-t-m">
+        <label class="col-30 al-c bb bl bt    bg-royalblue">แบงค์/เหรียญ</label>                
+        <label class="col-30 al-c bb bl bt    bg-cornblue">จำนวน</label>
+        <label class="col-40 al-c bb bl bt br bg-steelblue">เป็นเงิน (บาท)</label>
+      </div>
+
+      <!-- 1000 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl fs-xl">1000</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m1000" name="m1000" placeholder="จำนวน 1000" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total1000" name="total1000" placeholder="รวม 1000" readonly>
+      </div>
+      <!-- 500 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl fs-xl fc-skyblue">500</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m500" name="m500" placeholder="จำนวน 500" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total500" name="total500" placeholder="รวม 500" readonly>
+      </div>
+      <!-- 100 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl fs-xl fc-brick">100</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m100" name="m100" placeholder="จำนวน 100" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total100" name="total100" placeholder="รวม 100" readonly>
+      </div>
+      <!-- 50 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl fs-xl fc-aquamarine">50</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m50" name="m50" placeholder="จำนวน 50" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total50" name="total50" placeholder="รวม 50" readonly>
+      </div>
+      <!-- 20 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl fs-xl fc-ligreen">20</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m20" name="m20" placeholder="จำนวน 20" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total20" name="total20" placeholder="รวม 20" readonly>
+      </div>
+      <!-- 10 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl fs-xl fc-gold">10</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m10" name="m10" placeholder="จำนวน 10" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total10" name="total10" placeholder="รวม 10" readonly>
+      </div>
+      <!-- 5 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl    fs-xl">5</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m5" name="m5" placeholder="จำนวน 5" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total5" name="total5" placeholder="รวม 5" readonly>
+      </div>
+      <!-- 2 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl    fs-xl">2</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m2" name="m2" placeholder="จำนวน 2" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total2" name="total2" placeholder="รวม 2" readonly>
+      </div>
+      <!-- 1 -->
+      <div class="row row-list">
+        <label class="col-30 al-r bb bl    fs-xl">1</label>                
+        <input class="col-30 al-r bb bl    fs-xl" type="number" id="m1" name="m1" placeholder="จำนวน 1" min=0 step="1" oninput="calcInRowList(this)">
+        <input class="col-40 al-r bb bl br fs-xl" type="number" id="total1" name="total1" placeholder="รวม 1" readonly>
+      </div>
+      <!-- รวม -->
+      <div class="row">
+        <label class="col-30 al-r bb bl     fs-xl"></label>              
+        <label class="col-30 al-r bb pd-r-l fs-xl">รวม</label>
+        <input class="col-40 al-r bb bl br  fs-xl" type="number" min=0 step="0.01" id="grandTotalBaht" placeholder="รวมทั้งหมด" readonly>
+      </div>
+    </form>
+  </main>
+  
+  <script src="CountMoney_Js.js"></script>
+
+</body>
+</html>
+
+
+
+
+ 
+
+

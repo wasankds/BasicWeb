@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+   <link rel="icon" type="image/png" href="https://toptengas.com/images/ttg_fav.png"/>
+   <title>ส่งออเดอร์</title>
+   <style>
+      *  { margin:0; padding:0; }
+      html, body { height:100% ; width:100% ; overflow:hidden ; }
+      iframe  { float:left ;height:100% ;width:100%;}
+      .header { border-bottom:1px solid #000}
+      .content { height:100% ; }
+   </style>
+</head>
+<body>
+  <div class="content">
+    <iframe id="myIframe" frameborder="0"></iframe>
+  </div>
+
+  <script defer>
+    var loc = window.location.toString() ; // console.log(loc)
+    let params = loc.split('?')[1]         // ตัดเอาหลัง ? มาได้เป็น Query String ทั้งหมด  // console.log(params)
+    let myIframe = document.getElementById("myIframe");
+    let urlExec = "https://script.google.com/macros/s/AKfycbyXuOMXCQBN1Kn19IqKr0KMjna8M19x_YBkNIOWPH-jtV7dh38O6WXsnP0AXwpOTtQC/exec";
+    let urlExecWithQuery = urlExec+"?"+params ;
+    myIframe.src = urlExecWithQuery;
+  </script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

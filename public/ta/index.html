@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">     
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+  <link rel="icon" type="image/png" href="https://toptengas.com/images/ttg_fav.png">
+  <title>ลงเวลาวัชรชัย</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    body{
+      color: aliceblue;    
+      font-family:'Sarabun','sans-serif';      
+      margin: auto;
+      width:400px;
+      min-height: 100vh;      
+
+      background:
+      radial-gradient(#333 3px, transparent 4px),
+      radial-gradient(#333 3px, transparent 4px),
+      linear-gradient(#111 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #555 75px, #555 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #555 76px, #555 77px, transparent 78px, transparent 109px), #111;
+     background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+      /* background-image: linear-gradient(#333 ,black,black,black,black,black,black,black,black,black,black,black); */
+    }
+
+    main{
+      border-radius: 7px;
+      margin-top: 10px;
+    }
+
+    .title{
+      padding-top: 1px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .subtitle{
+      margin-top: 7px;
+      padding: 0 10px;
+    }
+    /* .subtitle marquee{
+      behavior:alternate;
+      border: 1px dashed wheat;
+      padding: 3px 10px;
+      border-radius: 3px;
+      color: lime;
+      direction:"right";
+      font-size: 0.75rem;
+      background-color: black;
+    } */
+    fieldset{
+      border: 1px solid black;
+      border-radius: 7px;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+
+      padding-inline-start: 0.75em;
+      padding-inline-end: 0.75em;
+      
+      padding-block-start: 0em;
+      padding-block-end: 0em;
+      
+      min-inline-size: min-content;
+      margin-top: 7px;
+      background-color: #222;
+    }
+    legend{ font-size: 0.75rem; color: #999;} 
+
+    .row{
+      display: flex; 
+      flex-direction: row;  
+      padding: 10px 0;
+      transition: font-size 0.2s ease-out 100ms;
+      line-height: 1.2rem;
+    }
+    .row:hover { 
+      filter: brightness(130%); 
+      cursor: pointer;  
+      font-size: 1.05rem;
+      line-height: 1.2rem;
+    }
+
+    .col-1{ 
+      flex-basis: 17%; 
+      min-width: 17%; 
+      text-align: center;
+      text-indent: 2px;
+      border-radius: 30px 0 0 30px;
+      border-top: 3px solid rgba(255,255,255,0.5);
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px dashed #ddd;
+    }
+    .col-2{ 
+      flex-basis: 83%; 
+      min-width: 83%;
+      padding: 10px 0;
+      text-align: center;
+      border-right: 1px solid #ddd;
+      border-top: 3px solid rgba(255,255,255,0.5);
+      border-bottom: 1px solid #ddd;
+      border-radius: 0 15px 5px 0;
+
+      background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, rgba(255,255,255,0.1) 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+                  radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px,  rgba(255,255,255,0.2) 10px, rgba(96, 16, 48, 0) 11px),#8a3;
+      background-size: 10px 10px;
+    }
+    .gg-icon1{ 
+      font-size: 1.25rem ;
+      position: relative; 
+      bottom: -11px; 
+      color: lightgreen;
+    }
+    .gg-icon2{ 
+      font-size: 1.5rem ;  
+      position: relative; 
+      bottom: -9px; 
+      color: lightgreen
+    }
+
+    .a{ background-color: rgb(37, 83, 50); }
+    .a-li{ background-color: rgb(69, 125, 85); }
+
+    .u{ background-color: rgb(112, 116, 45); }
+    .u-li{ background-color: rgb(148, 152, 71); }
+    
+    .r{ background-color: rgb(16, 74, 91)}
+    .r-li{ background-color: rgb(43, 119, 142)}
+
+    a { text-decoration: none!important; text-shadow: 0px 0px 5px black; }
+    a:link {color: whitesmoke!important;} 
+    a:visited {color: whitesmoke!important;}     
+    a:hover {color: lime!important; text-decoration:none!important ;} 
+    a:active {color: lime!important;} 
+    
+    /**************** จอขนาดเล็ก ****************/
+    @media screen and (max-width: 450px) {
+      body{ width: 100%!important; }
+      main{ border-radius: 0px; margin-top: 5px; }
+      fieldset{ margin: 5px 7px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  
+  <main>
+
+    <!--  -->
+    <section class="title">
+      <div style="color:white" class="title">      
+        <span style="color:Gold">ลง</span><span style="color:wheat"></span><span style="color:goldenrod">เวลา</span><span style="color:white" class="fs-s">วัชรชัย</span>
+      </div>    
+    </section>
+  
+    <!--  -->
+    <!-- <section class="subtitle">
+      <marquee>พบปัญหาการใช้งานติดต่อ วสันต์ 081-459-8343, Line Id : wasankds</marquee>
+    </section> -->
+
+    <fieldset class=""><legend>โปรเจกต์ A</legend>
+      <div class="row">
+        <div class="col-1 a-li">
+          <span class="gg-icon1 material-symbols-outlined ">schedule</span>
+        </div> 
+        <div class="col-2 a">
+          <a href="https://www.toptengas.com/ta/ta_a_ta.html" target="_blank">ลงเวลางาน (O/A/U)</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1 a-li">
+          <span class="gg-icon1 material-symbols-outlined ">update</span>
+        </div> 
+        <div class="col-2 a">
+          <a href="https://www.toptengas.com/ta/ta_a_ct.html" target="_blank">แก้เวลา (O)</a>
+        </div>
+      </div>
+    </fieldset>    
+
+    <fieldset><legend>โปรเจกต์ U</legend>
+      <div class="row">
+        <div class="col-1 u-li">
+          <span class="gg-icon1 material-symbols-outlined ">person_add</span>
+        </div> 
+        <div class="col-2 u">
+          <a href="https://www.toptengas.com/ta/ta_u_ru.html" target="_blank">ลงทะเบียนยูสเซอร์ (O)</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1 u-li">
+          <span class="gg-icon1 material-symbols-outlined ">lock_reset</span>
+        </div> 
+        <div class="col-2 u">
+          <a href="https://www.toptengas.com/ta/ta_u_cpw.html" target="_blank">เปลี่ยนรหัสผ่าน (O/A/U)</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1 u-li">
+          <span class="gg-icon1 material-symbols-outlined ">settings</span>
+        </div> 
+        <div class="col-2 u">
+          <a href="https://www.toptengas.com/ta/ta_u_setup.html" target="_blank">ตั้งค่า  (O)</a>
+        </div>
+      </div>
+      
+    </fieldset>
+
+    <fieldset><legend>โปรเจกต์ R</legend>
+
+      <div class="row">
+        <div class="col-1 r-li">
+          <span class="gg-icon1 material-symbols-outlined ">event</span>
+        </div> 
+        <div class="col-2 r">
+          <a href="https://www.toptengas.com/ta/ta_r_dr.html" target="_blank">รายงานรายวัน (O/A)</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1 r-li">
+          <span class="gg-icon1 material-symbols-outlined ">calendar_month</span>
+        </div> 
+        <div class="col-2 r">
+          <a href="https://www.toptengas.com/ta/ta_r_mr.html" target="_blank">รายงานรายเดือน (O/A)</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1 r-li">
+          <span class="gg-icon2 material-symbols-outlined "><span class="material-symbols-outlined">
+            contact_page
+            </span></span>
+        </div>
+        <div class="col-2 r">
+          <a href="https://www.toptengas.com/ta/ta_r_ur.html" target="_blank">รายงานยูสเซอร์ (O/A)</a>
+        </div>
+      </div>
+
+    </fieldset>
+   
+  </main>
+
+</body>
+</html>
+

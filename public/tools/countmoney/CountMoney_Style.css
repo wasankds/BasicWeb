@@ -1,0 +1,152 @@
+/****************** OVERWRITE ไฟล์ก่อนหน้า ***********/
+html{ background-color: black; }
+body{ 
+  max-width: 600px;
+  margin: auto;
+  display: block;
+  overflow: auto;
+  background-color: darkslategray;
+  min-height: 100vh;
+}
+header{ background-color: black; }
+
+label{ line-height: 2rem; }
+
+.row-list label{ padding-right: 10px; }
+.row input{
+  line-height: 1.75rem;
+}
+
+.row{ display: flex; flex-direction: row; }
+/*  */
+.col-1 { flex-basis:25%; max-width:25%; overflow: hidden;}
+.col-2 { flex-basis:20%; max-width:20%; overflow: hidden;}
+.col-3 { flex-basis:15%; max-width:15%; overflow: hidden;}
+.col-4 { flex-basis:20%; max-width:20%; overflow: hidden;}
+.col-5 { flex-basis:20%; max-width:20%; overflow: hidden;}
+/*  */
+.col-01  { flex-basis:1%; max-width:1%; overflow: hidden;}
+.col-02  { flex-basis:2%; max-width:2%; overflow: hidden;}
+.col-03  { flex-basis:3%; max-width:3%; overflow: hidden;}
+.col-04  { flex-basis:4%; max-width:4%; overflow: hidden;}
+.col-05  { flex-basis:5%; max-width:5%; overflow: hidden;}
+.col-06  { flex-basis:6%; max-width:6%; overflow: hidden;}
+.col-07  { flex-basis:7%; max-width:7%; overflow: hidden;}
+.col-08  { flex-basis:8%; max-width:8%; overflow: hidden;}
+.col-09  { flex-basis:9%; max-width:9%; overflow: hidden;}
+.col-10  { flex-basis:10%; max-width:10%; overflow: hidden;}
+.col-11  { flex-basis:11%; max-width:11%; overflow: hidden;}
+.col-12  { flex-basis:12%; max-width:12%; overflow: hidden;}
+.col-13  { flex-basis:13%; max-width:13%; overflow: hidden;}
+.col-14  { flex-basis:14%; max-width:14%; overflow: hidden;}
+.col-15  { flex-basis:15%; max-width:15%; overflow: hidden;}
+.col-20  { flex-basis:20%; max-width:20%; overflow: hidden;}
+.col-24  { flex-basis:24%; max-width:24%; overflow: hidden;}
+.col-25  { flex-basis:25%; max-width:25%; overflow: hidden;}
+.col-30  { flex-basis:30%; max-width:30%; overflow: hidden;}
+.col-34  { flex-basis:34%; max-width:34%; overflow: hidden;}
+.col-35  { flex-basis:35%; max-width:35%; overflow: hidden;}
+.col-40  { flex-basis:40%; max-width:40%; overflow: hidden;}
+.col-45  { flex-basis:45%; max-width:45%; overflow: hidden;}
+.col-50  { flex-basis:50%; max-width:50%; overflow: hidden;}
+.col-55  { flex-basis:55%; max-width:55%; overflow: hidden;}
+.col-60  { flex-basis:60%; max-width:60%; overflow: hidden;}
+.col-65  { flex-basis:65%; max-width:65%; overflow: hidden;}
+.col-66  { flex-basis:66%; max-width:66%; overflow: hidden;}
+.col-70  { flex-basis:70%; max-width:70%; overflow: hidden;}
+.col-75  { flex-basis:75%; max-width:75%; overflow: hidden;}
+.col-80  { flex-basis:80%; max-width:80%; overflow: hidden;}
+.col-85  { flex-basis:85%; max-width:85%; overflow: hidden;}
+.col-90  { flex-basis:90%; max-width:90%; overflow: hidden;}
+.col-95  { flex-basis:95%; max-width:95%; overflow: hidden;}
+.col-100 { flex-basis:100%; max-width:100%;overflow: hidden;}
+
+/********************************************************
+       สำหรับปุ่ม 
+*********************************************************/
+.btn-group{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.btn-show{
+  grid-column: 1/5;
+  border: none;
+  border: 1px solid black!important;
+  border-radius: 3px!important;
+  display: inline-block;
+  color: white;
+}
+.btn-confirm{
+  grid-column: 1/3;
+  background-color: green;    
+  border: none;
+  border-left: 1px solid black!important;
+  border-top: 1px solid black!important;
+  border-bottom: 1px solid black!important;
+  border-radius: 3px 0 0 3px!important;
+  color: white;
+  display: none;
+} 
+.btn-cancel{
+  grid-column: 3/5;
+  background-color: orangered;
+  border: none;
+  border: 1px solid black!important;
+  border-radius: 0 3px 3px 0!important;
+  color: white;
+  display: none;
+} 
+
+
+/****** ปุ่ม ****************************/
+.btn{
+  padding: 0!important;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  border: 1px solid black!important;
+  cursor: pointer;
+}
+.btn[disabled]{
+  background-color: darkgray;
+  cursor: not-allowed; 
+  border:none;  
+}
+
+.date-ctn{ padding: 0; position: relative; }
+.date-ctn .dtext{
+  width: 100%; height: 100%;
+}
+.date-ctn .ddate{ 
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+}
+
+/************ REPORT *******************************/
+.report{
+  color: blue;
+  padding : 3px 10px;
+  background-color: rgb(255, 224, 212);
+  border: 2px dashed lightsalmon;
+  border-radius: 4px;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+
+/**************** จอขนาดเล็ก ****************/
+@media screen and (max-width: 450px) {
+  body{ width: 100%!important; }
+  ::placeholder { font-size: 0.8rem; }  
+  .col-1 { flex-basis:30%; max-width:306%}
+  .col-2 { flex-basis:25%; max-width:25%}
+  .col-3 { flex-basis:17%; max-width:17%}
+  .col-4 { flex-basis:11%; max-width:11%}
+  .col-5 { flex-basis:17%; max-width:17%}
+  .fs-xl { font-size: 1.1rem!important;}
+  .row input[type=number]{
+    padding-right: 5px;
+  }
+}
+
