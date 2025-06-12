@@ -13,18 +13,25 @@ const port = 80
 // Middleware to parse JSON request bodies
 app.use(express.json())
 
+import aboutRouter from './routes/aboutRouter.js'
+import loginRouter from './routes/loginRouter.js'
+
+
 global.titleHome = 'Home'
 global.DOMAIN_ALLOW = 'http://localhost'
+global.HOME = 'HOME'
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
 // Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')))
 
-// Define a route
+
 app.get('/', (req, res) => {
   res.render('index', { title: titleHome  })
 })
+app.use(aboutRouter)
+app.use(loginRouter)
 
 // Define a route
 app.post('/data', (req, res) => {
