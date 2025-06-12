@@ -15,6 +15,7 @@ app.use(express.json())
 
 import aboutRouter from './routes/aboutRouter.js'
 import loginRouter from './routes/loginRouter.js'
+import manageUsersRouter from './routes/manageUsersRouter.js'
 
 
 global.titleHome = 'Home'
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 })
 app.use(aboutRouter)
 app.use(loginRouter)
+app.use(manageUsersRouter)
 
 // Define a route
 app.post('/data', (req, res) => {
